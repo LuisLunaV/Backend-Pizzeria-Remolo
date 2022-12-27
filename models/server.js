@@ -10,7 +10,8 @@ class Server{
         this.port = process.env.PORT;
 
         this.paths = {
-            usuarios: '/api/usuarios'
+            usuarios: '/api/usuarios',
+            pedidos: '/api/pedidos'
         }
 
         //Conectar a la BDA
@@ -34,7 +35,8 @@ class Server{
     }
 
     router(){
-        this.app.use( this.paths.usuarios, require('../router/user.routes.js'))
+        this.app.use( this.paths.usuarios, require('../router/user.routes.js')),
+        this.app.use( this.paths.pedidos, require('../router/pedido.routes.js'))
     }
 
     listen(){

@@ -23,7 +23,7 @@ const users = {
       usuario.Usuario_Nombre    = Usuario_Nombre.toUpperCase();
       usuario.Usuario_Direccion = Usuario_Direccion.toUpperCase();
 
-      // await usuario.save();
+      await usuario.save();
 
      return res.status(201).json({
        

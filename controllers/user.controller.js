@@ -31,12 +31,25 @@ const users = {
       
     });
 
-    }
+    },
+
+    userPut: async( req = request, res = response )=>{
+
+      const { id } = req.params;
+      const body   = req.body;
+
+      const usuario = await User.findByPk( id );
+
+      await usuario.update( body, { new: true });
+
+      return res.status(201).json({
+        usuario
+      })
+      
+      }
+      
 
 };
 
-userPut: async( req = request, res = response )=>{
-
-}
 
 module.exports = users;

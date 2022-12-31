@@ -35,4 +35,8 @@ const users = {
 
 };
 
+userPut: async( req = request, res = response )=>{
+
+}
+
 module.exports = users;

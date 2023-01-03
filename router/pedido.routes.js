@@ -1,9 +1,15 @@
 const { Router } = require('express');
 
-const pedidos = require('../controllers/pedido.controller.js');
+const {
+    crearPedido,
+    obtenerPedidoId,
+    actualizarPedido
+} = require('../controllers/pedido.controller.js');
 
 const router = Router();
 
-router.post('/', pedidos.pedidoPost)
+router.get('/:id', obtenerPedidoId );
+router.post('/',   crearPedido );
+router.put('/:id', actualizarPedido);
 
 module.exports = router;

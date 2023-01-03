@@ -5,7 +5,7 @@ const { User } = require('../models/user');
 const users = {
 
   //Creamos un nuevo cliente (usuario).
-    userPost: async( req = request, res = response )=>{
+    crearUsuario: async( req = request, res = response ) => {
       
         const body = req.body;
 
@@ -20,8 +20,8 @@ const users = {
       
         const usuario = new User( { Usuario_Nombre, Usuario_Telefono, Usuario_Direccion } );
 
-      usuario.Usuario_Nombre    = Usuario_Nombre.toUpperCase();
-      usuario.Usuario_Direccion = Usuario_Direccion.toUpperCase();
+        usuario.Usuario_Nombre    = Usuario_Nombre.toUpperCase();
+        usuario.Usuario_Direccion = Usuario_Direccion.toUpperCase();
 
       await usuario.save();
 
@@ -33,7 +33,8 @@ const users = {
 
     },
 
-    userPut: async( req = request, res = response )=>{
+    //Habilitamos la opcion PUT si en algun momento el cliente desea cambiar algun dato de su entrega.
+    actualizarUsuario: async( req = request, res = response ) => {
 
       const { id } = req.params;
       const body   = req.body;
@@ -46,9 +47,16 @@ const users = {
         usuario
       })
       
-      }
-      
+      },
 
+
+      // PENDIENTE
+      //Esta opcion nos ayudara, si es que el cliente desea cancelar su solicitud
+      // userDelete: async( req = require, res = response ) => {
+      //   const { id } = req.params;
+        
+      // }
+      
 };
 
 

@@ -12,7 +12,11 @@ Categoria_Descripcion:{
     type: DataTypes.STRING,
 }
 
-});
+},{defaultScope: {
+      attributes: { exclude: ['createdAt', 'updatedAt'] }
+    }
+}
+);
 
 module.exports = {
     Categoria

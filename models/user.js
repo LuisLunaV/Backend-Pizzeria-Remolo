@@ -5,8 +5,8 @@ const { db } = require('../database/config.db');
  //Definimos el nombre de la tabla de la BD a la que estamos apuntando.
 const User = db.define('usuarios',{
     Usuario_Id:{
-
         type: DataTypes.INTEGER,
+        autoIncrement:true,
         primaryKey: true
     },
 

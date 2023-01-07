@@ -4,8 +4,8 @@ const { db } = require('../database/config.db');
 
 const Pedido = db.define('pedidos_detalle',{
 PD_Id:{
-
     type: DataTypes.INTEGER,
+    autoIncrement: true,
     primaryKey: true
 },
 

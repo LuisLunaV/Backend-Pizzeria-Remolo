@@ -12,6 +12,7 @@ class Server{
         this.paths = {
             usuarios:  '/api/usuarios',
             categorias:'/api/categorias',
+            productos: '/api/productos',
             pedidos:   '/api/pedidos'
         }
 
@@ -38,6 +39,7 @@ class Server{
     router(){
         this.app.use( this.paths.usuarios,   require('../router/user.routes.js')),
         this.app.use( this.paths.categorias, require('../router/categoria.routes.js')),
+        this.app.use( this.paths.productos,  require('../router/producto.routes.js')),
         this.app.use( this.paths.pedidos,    require('../router/pedido.routes.js'))
     }
 

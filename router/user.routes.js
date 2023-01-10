@@ -12,6 +12,7 @@ const router = Router();
 
 router.post('/', [
 check('Usuario_Nombre', 'Evite utilizar numeros y signos').matches(/^[a-zA-Z ]+$/),
+check('Usuario_Telefono','Evite utilizar letras y signos, el rango del numero debe ser entre min:10 y max:14').matches(/^[0-9]+$/).isLength( { min:10, max:14 } ),
 validarCampos
 ], crearUsuario);
 

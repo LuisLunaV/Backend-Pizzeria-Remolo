@@ -4,6 +4,18 @@ const { User } = require('../models/user');
 
 const users = {
 
+  // Buscamos al cliente por su ID
+  buscarUsuarioPorId: async( req = request, res = response ) => {
+
+    const { id } = req.params;
+
+    const user = await User.findByPk( id );
+
+    res.status(200).json({
+      user
+    })
+  },
+
   //Creamos un nuevo cliente (usuario).
     crearUsuario: async( req = request, res = response ) => {
       

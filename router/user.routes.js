@@ -12,7 +12,6 @@ const { existeClientePorID } = require('../helpers/db-validator.js');
 
 const router = Router();
 
-//Agregar helper que valide la existencia del cliente
 router.get('/:id',[
 check('id').custom( existeClientePorID ),
 validarCampos

@@ -13,7 +13,10 @@ const { existeClientePorID } = require('../helpers/db-validator.js');
 const router = Router();
 
 //Agregar helper que valide la existencia del cliente
-router.get('/:id', buscarUsuarioPorId );
+router.get('/:id',[
+check('id').custom( existeClientePorID ),
+validarCampos
+], buscarUsuarioPorId );
 
 router.post('/', [
 check('Usuario_Nombre', 'Evite utilizar numeros y signos').matches(/^[a-zA-Z ]+$/),
@@ -23,7 +26,7 @@ validarCampos
 ], crearUsuario);
 
 router.put('/:id',[
-    check('Usuario_Id').custom( existeClientePorID )
+    check('id').custom( existeClientePorID )
 ], actualizarUsuario);
 
 module.exports = router;

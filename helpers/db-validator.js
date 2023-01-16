@@ -22,7 +22,7 @@ const existeProductoPorCategoria = async( id ) => {
         Prod_categoriaID: id
     }});
 
-    //Validamos si no existe el pedido, o si la matriz que acumula los pedidos
+    //Validamos si no existe el producto, o si la matriz que acumula los productos
     //es igual que cero.
 
     if( !existeProductoPorCategoria || existeProductoPorCategoria.length === 0 ){

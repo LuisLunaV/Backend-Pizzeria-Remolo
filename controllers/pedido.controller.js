@@ -1,4 +1,5 @@
 const { request, response } = require('express');
+const { Op } = require('sequelize');
 
 const { Pedido } = require('../models/pedido.js');
 

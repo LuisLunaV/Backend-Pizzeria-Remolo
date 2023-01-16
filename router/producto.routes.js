@@ -4,6 +4,6 @@ const { obtenerProductosPorCategoria } =require('../controllers/producto.control
 
 const router = Router();
 
-router.get('/', obtenerProductosPorCategoria )
+router.get('/:id', obtenerProductosPorCategoria )
 
 module.exports = router;

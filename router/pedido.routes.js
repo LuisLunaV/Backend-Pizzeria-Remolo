@@ -22,6 +22,7 @@ check('PD_PedidosID', 'Evite utilizar letras y signos').matches(/^[0-9]+$/),
 check('PD_ProdID', 'Evite utilizar letras y signos').matches(/^[0-9]+$/),
 check('PD_Cantidad', 'Evite utilizar letras y signos').matches(/^[0-9]+$/),
 check('PD_PrecioUnitario', 'Evite utilizar letras y signos').matches(/^[0-9]+$/),
+validarCampos
 ] , crearPedido );
 router.put('/:id', actualizarPedido);
 

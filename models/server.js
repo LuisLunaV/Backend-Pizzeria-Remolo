@@ -13,7 +13,8 @@ class Server{
             usuarios:  '/api/usuarios',
             categorias:'/api/categorias',
             productos: '/api/productos',
-            pedidos:   '/api/pedidos'
+            pedidos:   '/api/pedidos',
+            precios:   '/api/precios'
         }
 
         //Conectar a la BDA
@@ -41,6 +42,7 @@ class Server{
         this.app.use( this.paths.categorias, require('../router/categoria.routes.js')),
         this.app.use( this.paths.productos,  require('../router/producto.routes.js')),
         this.app.use( this.paths.pedidos,    require('../router/pedido.routes.js'))
+        this.app.use( this.paths.precios,    require('../router/precio.routes.js'))
     }
 
     listen(){

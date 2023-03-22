@@ -1,6 +1,6 @@
 # BackEnd Pizzeria Remolo
 
-Este repositorio contiene el código fuente del backend (Pizzeria don remolo) encargado de manejar las peticiones de pedidos (CRUD) y la conexión a una base de datos MySQL.
+Este repositorio contiene el código fuente del backend (Pizzeria don remolo) encargado de manejar las peticiones (CRUD) y la conexión a una base de datos MySQL.
 
 ## Requisitos previos
 
